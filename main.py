@@ -21,7 +21,7 @@ def get_image(name):
         model="flux",
         prompt=f"Картинка для поздравления на 8 марта по теме: {name}",
         response_format="url",
-        temperature=0.5
+        temperature=1
     )
 
     return response.data[0].url
@@ -49,5 +49,5 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 4000))
+    port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
